@@ -6,6 +6,9 @@
 using namespace std;
 using namespace boost;
 
+/// 하나의 구조체가 하나의 책임만 가지도록 하는 것이 SRP
+/// HOS_hero에 save 함수까지 넣으면 SRP를 위반함
+
 // HOS 영웅의 이름과 스탯을 저장하는 구조체
 struct HOS_hero
 {
@@ -28,10 +31,10 @@ struct HOS_hero
 	//	{
 	//		if (!file)
 	//			throw std::exception("file open error");
-
+	//
 	//		for (auto& e : stat)
 	//			file << e << endl;
-
+	//
 	//		cout << filename + " saved" << endl;
 	//	}
 	//	catch (std::exception& err)

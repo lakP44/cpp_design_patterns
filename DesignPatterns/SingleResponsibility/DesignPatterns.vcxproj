@@ -22,7 +22,7 @@
     <VCProjectVersion>17.0</VCProjectVersion>
     <Keyword>Win32Proj</Keyword>
     <ProjectGuid>{80441cbd-ecb3-4977-871b-2252854aff7d}</ProjectGuid>
-    <RootNamespace>DesignPatterns</RootNamespace>
+    <RootNamespace>SingleResponsibility</RootNamespace>
     <WindowsTargetPlatformVersion>10.0</WindowsTargetPlatformVersion>
     <ProjectName>SingleResponsibility</ProjectName>
   </PropertyGroup>
