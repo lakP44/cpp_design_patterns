@@ -1,0 +1,3 @@
+﻿E:\VisualStudio\IDE\MSBuild\Microsoft\VC\v170\Microsoft.CppBuild.targets(531,5): warning MSB8028: The intermediate directory (x64\Debug\) contains files shared from another project (DesignPatterns.vcxproj).  This can lead to incorrect clean and rebuild behavior.
+  SingleResponsibility.cpp
+  DesignPatterns.vcxproj -> E:\OneDrive\Backup_Container\coding_total\CPP\design_patterns\DesignPatterns\x64\Debug\SingleResponsibility.exe
