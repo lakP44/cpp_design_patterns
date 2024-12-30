@@ -1,4 +1,4 @@
-#include <iostream>
+ï»¿#include <iostream>
 #include <fstream>
 #include <vector>
 #include <boost/lexical_cast.hpp>
@@ -6,18 +6,19 @@
 using namespace std;
 using namespace boost;
 
-/// ÇÏ³ªÀÇ ±¸Á¶Ã¼°¡ ÇÏ³ªÀÇ Ã¥ÀÓ¸¸ °¡Áöµµ·Ï ÇÏ´Â °ÍÀÌ SRP
-/// HOS_hero¿¡ save ÇÔ¼ö±îÁö ³ÖÀ¸¸é SRP¸¦ À§¹İÇÔ
+/// í•˜ë‚˜ì˜ êµ¬ì¡°ì²´ê°€ í•˜ë‚˜ì˜ ì±…ì„ë§Œ ê°€ì§€ë„ë¡ í•˜ëŠ” ê²ƒì´ SRP
+/// HOS_heroì— save í•¨ìˆ˜ê¹Œì§€ ë„£ìœ¼ë©´ SRPë¥¼ ìœ„ë°˜í•¨
+/// ì´ë¦„ : Single Responsibility Principle
 
-// HOS ¿µ¿õÀÇ ÀÌ¸§°ú ½ºÅÈÀ» ÀúÀåÇÏ´Â ±¸Á¶Ã¼
+// HOS ì˜ì›…ì˜ ì´ë¦„ê³¼ ìŠ¤íƒ¯ì„ ì €ì¥í•˜ëŠ” êµ¬ì¡°ì²´
 struct HOS_hero
 {
 	string name;
 	vector<string> stat;
 
-	HOS_hero(string name) : name(name) {} // »ı¼ºÀÚ
+	HOS_hero(string name) : name(name) {} // ìƒì„±ì
 
-	// stat¿¡ Ãß°¡ÇÏ´Â ÇÔ¼ö
+	// statì— ì¶”ê°€í•˜ëŠ” í•¨ìˆ˜
 	void add_stat(const string& s)
 	{
 		static int count = 0;
@@ -45,11 +46,11 @@ struct HOS_hero
 	//}
 };
 
-// Áö¼Ó¼º °ü¸®ÀÚ
+// ì§€ì†ì„± ê´€ë¦¬ì
 struct PersistenceManager
 {
-	// ÀÌ·¸°Ô ÇÏ¸é HOS_heroÀÇ save ÇÔ¼ö°¡ PersistenceManager·Î ¿Å°ÜÁü
-	// ÇÏ³ªÀÇ ±¸Á¶Ã¼°¡ ÇÏ³ªÀÇ Ã¥ÀÓ¸¸ °¡Áöµµ·Ï ÇÏ´Â °ÍÀÌ SRP
+	// ì´ë ‡ê²Œ í•˜ë©´ HOS_heroì˜ save í•¨ìˆ˜ê°€ PersistenceManagerë¡œ ì˜®ê²¨ì§
+	// í•˜ë‚˜ì˜ êµ¬ì¡°ì²´ê°€ í•˜ë‚˜ì˜ ì±…ì„ë§Œ ê°€ì§€ë„ë¡ í•˜ëŠ” ê²ƒì´ SRP
 	void save(const HOS_hero& HOS, const string& filename)
 	{
 		ofstream file(filename);
